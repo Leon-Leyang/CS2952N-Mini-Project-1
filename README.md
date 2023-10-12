@@ -82,39 +82,125 @@ Upon execution, captions will be generated for 10 random images from the Flicker
 
 
 
-#### Example result
+#### Example Result
+
+The table provides a summary of details for each of the 10 examples, including the image path, the top five identified classes, the generated caption, and the corresponding actual caption.
 
 |        Image  Path        |                        Top 5 Classes                         |                      Generated Caption                       |                        Actual Caption                        |
 | :-----------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 | 2216695423_1362cb25f3.jpg | borzoi, hand held computer, African hunting dog, Saluki, wire haired fox terrier |                A dog runs through the grass.                 |   A group of large white and orange dogs are in the grass.   |
 | 246055693_ccb69ac5c6.jpg  | Chesapeake Bay retriever, running shoe, balance beam, computer keyboard, picket fence |     A dog lies on a grassy lawn, looking at the camera.      |  A blond dog runs down a flight of stairs to the backyard.   |
-| 2265096094_8cc34d669c.jpg | oxcart, beach wagon, Arabian camel, shopping cart, sulphur crested cockatoo |     A man and a woman riding a wagon pulled by a camel.      |   A donkey pulling a cart with a boy in it takes a brake.    |
-|             4             | cornet, hair slide, hand held computer, picket fence, chickadee |              A man in a feather hat looks down.              | A lady stands in the middle of a crowd wearing white gloves. |
-|             5             | football helmet, thresher, swing, hand held computer, rapeseed |          A boy in a football helmet rides a swing.           | A boy in a yellow uniform carrying a football is blocking another boy in a blue uniform. |
-|             6             |      Granny Smith, teddy, bell cote, Newfoundland, bib       |                  A girl holds a teddy bear.                  | A lady holds a little boy while another little boy smiles at them. |
-|             7             |    Weimaraner, lakeside, upright, balance beam, cockroach    |           A Weimaraner stands on a lakeside dock.            |        A big hound dog walking on a log in the woods.        |
-|             8             |         basketball, shoji, web site, robin, Pembroke         |         A man in a suit shooting a basketball hoop.          |              A boy playing basketball in a gym               |
-|             9             |        buckeye, stretcher, quail, spotlight, knee pad        | A man is holding a spotlight while looking at an injured quail. | a football player in a red jersey getting his knee looked at by another man |
-|            10             | fire screen, dogsled, table lamp, European fire salamander, motor scooter' |            A boy sitting in front of a fireplace.            |               People sit near a fire outside.                |
+| 2265096094_8cc34d669c.jpg |    horse cart, oxcart, Maltese dog, beach wagon, Model T     |              A man driving a horse-drawn cart.               |   A donkey pulling a cart with a boy in it takes a brake.    |
+| 2204550058_2707d92338.jpg | groenendael, hand held computer, picket fence, neck brace, ringlet |               A dog with a ball in his mouth.                | A lady stands in the middle of a crowd wearing white gloves. |
+| 2526041608_a9775ab8d7.jpg | football helmet, desktop computer, swing, scoreboard, shield |                   A boy playing football.                    | A boy in a yellow uniform carrying a football is blocking another boy in a blue uniform. |
+| 2522297487_57edf117f7.jpg | cradle, cougar, Dandie Dinmont, spaghetti squash, Granny Smith |                 A baby sleeping in a cradle.                 | A lady holds a little boy while another little boy smiles at them. |
+| 1554713437_61b64527dd.jpg | Weimaraner, balance beam, cocktail shaker, worm fence, Greater Swiss Mountain dog |             A dog is walking on a balance beam.              |        A big hound dog walking on a log in the woods.        |
+| 2251747182_6b67a3ab8b.jpg |      basketball, web site, shoji, Pembroke, ballplayer       |             A girl in a kimono plays basketball.             |              A boy playing basketball in a gym               |
+| 241345905_5826a72da1.jpg  |      buckeye, stretcher, prayer rug, scoreboard, Saluki      |               A man stands on a diving board.                | a football player in a red jersey getting his knee looked at by another man |
+| 2610447973_89227ff978.jpg | black grouse, table lamp, mountain tent, space heater, tripod | A man and his dog sit at a table in a black grouse hunting cabin. |               People sit near a fire outside.                |
+
+
+
+Below are the visualizations:
+
+![2216695423_1362cb25f3](./result/2216695423_1362cb25f3.jpg)
+**Top 5 Classes:** borzoi, hand held computer, African hunting dog, Saluki, wire haired fox terrier
+**Generated Caption:** A dog runs through the grass.
+**Actual Caption:** A group of large white and orange dogs are in the grass.
+
+
+
+![246055693_ccb69ac5c6](./result/246055693_ccb69ac5c6.jpg)
+**Top 5 Classes:** Chesapeake Bay retriever, running shoe, balance beam, computer keyboard, picket fence
+**Generated Caption:** A dog lies on a grassy lawn, looking at the camera.
+**Actual Caption:** A blond dog runs down a flight of stairs to the backyard.
+
+
+
+![2265096094_8cc34d669c](./result/2265096094_8cc34d669c.jpg)
+**Top 5 Classes:** horse cart, oxcart, Maltese dog, beach wagon, Model T
+**Generated Caption:** A man driving a horse-drawn cart.
+**Actual Caption:** A donkey pulling a cart with a boy in it takes a brake.
+
+
+
+![2204550058_2707d92338](./result/2204550058_2707d92338.jpg)
+**Top 5 Classes:** groenendael, hand held computer, picket fence, neck brace, ringlet
+**Generated Caption:** A dog with a ball in his mouth.
+**Actual Caption:** A lady stands in the middle of a crowd wearing white gloves.
+
+
+
+![2526041608_a9775ab8d7](./result/2526041608_a9775ab8d7.jpg) 
+**Top 5 Classes:** football helmet, desktop computer, swing, scoreboard, shield 
+**Generated Caption:** A boy playing football. 
+**Actual Caption:** A boy in a yellow uniform carrying a football is blocking another boy in a blue uniform.
+
+
+
+![2522297487_57edf117f7](./result/2522297487_57edf117f7.jpg) 
+**Top 5 Classes:** cradle, cougar, Dandie Dinmont, spaghetti squash, Granny Smith 
+**Generated Caption:** A baby sleeping in a cradle. 
+**Actual Caption:** A lady holds a little boy while another little boy smiles at them.
+
+
+
+![1554713437_61b64527dd](./result/1554713437_61b64527dd.jpg) 
+**Top 5 Classes:** Weimaraner, balance beam, cocktail shaker, worm fence, Greater Swiss Mountain dog 
+**Generated Caption:** A dog is walking on a balance beam. 
+**Actual Caption:** A big hound dog walking on a log in the woods.
+
+
+
+![2251747182_6b67a3ab8b](./result/2251747182_6b67a3ab8b.jpg) 
+**Top 5 Classes:** basketball, web site, shoji, Pembroke, ballplayer 
+**Generated Caption:** A girl in a kimono plays basketball. 
+**Actual Caption:** A boy playing basketball in a gym.
+
+
+
+![241345905_5826a72da1](./result/241345905_5826a72da1.jpg) 
+**Top 5 Classes:** buckeye, stretcher, prayer rug, scoreboard, Saluki 
+**Generated Caption:** A man stands on a diving board. 
+**Actual Caption:** a football player in a red jersey getting his knee looked at by another man.
+
+
+
+![2610447973_89227ff978](./result/2610447973_89227ff978.jpg) 
+**Top 5 Classes:** black grouse, table lamp, mountain tent, space heater, tripod 
+**Generated Caption:** A man and his dog sit at a table in a black grouse hunting cabin. 
+**Actual Caption:** People sit near a fire outside.
 
 
 
 #### Analysis of Predictions
 
-The current predictions from the model are below expectations. Some potential causes and corresponding solutions are discussed below:
+The model's current predictions sometimes yield overly simplified captions that lack detail. For instance, it captions an image as "A man driving a horse-drawn cart," whereas the actual description is "A donkey pulling a cart with a boy in it takes a brake." Furthermore, while it may describe a scene as "A dog runs through the grass," the actual scene involves "A group of large white and orange dogs in the grass." There are also instances where the results are far off the mark, such as predicting "A dog with a ball in his mouth" for an image whose accurate description is "A lady stands in the middle of a crowd wearing white gloves."
 
-1. **Challenges with Iterative Class Identification using CLIP**:
 
-   - **Issue**: The class names sourced from ImageNet are notably specific. Despite designing iterative prompts to exclude previously identified classes (e.g., "besides {}, the caption of the photo should contain {}"), the CLIP model often predicts several closely related categories for a singular object. This can lead to ambiguity when feeding these classes to GPT-3, especially since Flicker 8K captions lean towards broader category descriptions.
 
-   - **Solution**: Consider sourcing class names directly from the original Flicker 8K dataset. However, given that Flicker 8K's labels are in the form of captions, extracting specific class names while minimizing redundancy will be a meticulous task.
+Some potential causes and corresponding solutions are discussed below:
+
+1. **Zero-shot Identification with CLIP**
+
+   - **Issue**: The class names used are derived from ImageNet, which might not align seamlessly with the nuances of Flicker 8K.
+
+   - **Solution**: An approach worth considering is to source class names directly from the Flicker 8K dataset. However, since Flicker 8K's labels are caption-based, extracting distinct class names and reducing overlaps will require careful processing.
 
      
 
-2. **Limitations in Composing CLIP and GPT-3**:
+2. **Deficiency of Adjectives and Verbs in CLIP Output**:
 
-   - **Issue**: The integration of CLIP and GPT-3 in the current setup is somewhat rigid, with a one-directional flow of information. Consequently, the data CLIP provides might either be too sparse or too overwhelming for GPT-3, affecting caption quality.
-   - **Solution**: Introducing a back-querying mechanism may benefit the captioning model. This iterative feedback could assist GPT-3 in acquiring the most relevant details necessary for accurate captioning.
+   - **Issue**: ImageNet is primarily centered around nouns, missing out on adjectives and verbs. This leads to situations where, for a scene like "A boy in a yellow uniform carrying a football is blocking another boy in a blue uniform," CLIP may offer a limited output like "football helmet, desktop computer, swing, scoreboard, shield."
+
+   - **Solution**: A potential improvement could involve extracting adjectives and verbs from the Flicker 8K captions to enrich the information CLIP can offer.
+
+     
+
+3. **Challenges with CLIP-GPT-3 Integration**:
+
+   - **Issue**: The current method of integrating CLIP with GPT-3 is somewhat static, focusing on a unidirectional information flow. This can lead to GPT-3 receiving either insufficient or excessive details from CLIP, hindering the quality of generated captions.
+   - **Solution**: Incorporating a back-querying mechanism could be instrumental. By allowing iterative feedback between the models, GPT-3 could refine its queries to CLIP, ensuring it garners the most relevant information for precise caption generation.
 
 
 
