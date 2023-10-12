@@ -3,11 +3,16 @@ import clip
 import torch
 import requests
 import openai
+import time
 from PIL import Image
 
 
 # # Fix the seed for reproducibility
-torch.manual_seed(50)
+torch.manual_seed(60)
+
+# Set the OpenAI API key
+# TODO: Delete this key before submitting
+openai.api_key = "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"
 
 # Load the model
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -62,28 +67,18 @@ def get_random_image():
     return image_file, preprocess(Image.open(image_path)).unsqueeze(0)
 
 
-# Get the top k predictions for a random image
-num_classes = 5
-img_file, img = get_random_image()
-top_k_classes = get_class_predictions(img, num_classes)
-print(f"Top {num_classes} predictions for {img_file}:")
-print(top_k_classes)
-
-
-# Set the OpenAI API key
-# TODO: Delete this key before submitting
-openai.api_key = "YOUR_API_KEY"
-
-
 # Use the OpenAI API to generate a caption from the classes
 def pred_caption(classes):
-    context = """Generate a list of possible adjectives for the class:
+    context = """Generate a possible caption for the image with the specified classes:
 
-        cat, dog:
-        The cat is playing with a black dog.
-        
-        golden retriever, water:
-        The golden retriever is swimming in the water.
+        black and white bird, seeds, hand::
+        A black and white bird eating seeds out of someone 's hand.
+
+        couple, baby, stroller, grass:
+        A couple sit on the grass with a baby and stroller.
+
+        bloodhound, Chesapeake Bay retriever, English springer, swimming trunks:
+        A dog is swimming.
 
         """
 
@@ -93,15 +88,45 @@ def pred_caption(classes):
     response = openai.Completion.create(
         engine="davinci",
         prompt=prompt,
-        temperature=0.7,
+        temperature=0.5,
         max_tokens=50,
         stop="\n"
     )
     return response.choices[0].text.strip()
 
 
-classes = ", ".join(top_k_classes).replace("_", " ").replace("-", " ")
-gen_caption = pred_caption(classes)
-print("Generated caption:")
-print(gen_caption)
+def gen_caption_4_image():
+    # Get the top k predictions of classes for the image using CLIP
+    num_classes = 5
+    img_file, img = get_random_image()
+    top_k_classes = get_class_predictions(img, num_classes)
+    print(f"Top {num_classes} predictions for {img_file}:")
+    print(top_k_classes)
+
+    # Generate a caption for the image using GPT-3
+    classes = ", ".join(top_k_classes).replace("_", " ").replace("-", " ")
+    gen_caption = pred_caption(classes)
+    print("Generated caption:")
+    print(gen_caption)
+
+    # Get the actual caption from ./data/Flickr8k_text/Flickr8k.token.txt
+    with open('./data/Flickr8k_text/Flickr8k.token.txt', 'r') as f:
+        captions = f.readlines()
+        for caption in captions:
+            if img_file in caption:
+                actual_caption = caption.split("\t")[1]
+                break
+    print("Actual caption:")
+    print(actual_caption)
+
+
+for i in range(10):
+    if i > 2:
+        print("Waiting for 20 seconds to not exceed the OpenAI API rate limit...")
+        time.sleep(20)
+    print('Generating caption for a random image...')
+    gen_caption_4_image()
+
+
+
 
