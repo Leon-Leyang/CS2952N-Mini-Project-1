@@ -2,10 +2,11 @@ import os
 import clip
 import torch
 import requests
+import openai
 from PIL import Image
 
 
-# Fix the seed for reproducibility
+# # Fix the seed for reproducibility
 torch.manual_seed(50)
 
 # Load the model
@@ -69,4 +70,38 @@ print(f"Top {num_classes} predictions for {img_file}:")
 print(top_k_classes)
 
 
+# Set the OpenAI API key
+# TODO: Delete this key before submitting
+openai.api_key = "YOUR_API_KEY"
+
+
+# Use the OpenAI API to generate a caption from the classes
+def pred_caption(classes):
+    context = """Generate a list of possible adjectives for the class:
+
+        cat, dog:
+        The cat is playing with a black dog.
+        
+        golden retriever, water:
+        The golden retriever is swimming in the water.
+
+        """
+
+    # Append the desired class to the context to get attributes for it
+    prompt = context + f"{classes}:\n"
+
+    response = openai.Completion.create(
+        engine="davinci",
+        prompt=prompt,
+        temperature=0.7,
+        max_tokens=50,
+        stop="\n"
+    )
+    return response.choices[0].text.strip()
+
+
+classes = ", ".join(top_k_classes).replace("_", " ").replace("-", " ")
+gen_caption = pred_caption(classes)
+print("Generated caption:")
+print(gen_caption)
 
