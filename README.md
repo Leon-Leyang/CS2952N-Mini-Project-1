@@ -104,6 +104,7 @@ The table provides a summary of details for each of the 10 examples, including t
 Below are the visualizations:
 
 ![2216695423_1362cb25f3](./result/2216695423_1362cb25f3.jpg)
+
 **Top 5 Classes:** borzoi, hand held computer, African hunting dog, Saluki, wire haired fox terrier
 **Generated Caption:** A dog runs through the grass.
 **Actual Caption:** A group of large white and orange dogs are in the grass.
@@ -111,6 +112,7 @@ Below are the visualizations:
 
 
 ![246055693_ccb69ac5c6](./result/246055693_ccb69ac5c6.jpg)
+
 **Top 5 Classes:** Chesapeake Bay retriever, running shoe, balance beam, computer keyboard, picket fence
 **Generated Caption:** A dog lies on a grassy lawn, looking at the camera.
 **Actual Caption:** A blond dog runs down a flight of stairs to the backyard.
@@ -118,6 +120,7 @@ Below are the visualizations:
 
 
 ![2265096094_8cc34d669c](./result/2265096094_8cc34d669c.jpg)
+
 **Top 5 Classes:** horse cart, oxcart, Maltese dog, beach wagon, Model T
 **Generated Caption:** A man driving a horse-drawn cart.
 **Actual Caption:** A donkey pulling a cart with a boy in it takes a brake.
@@ -125,6 +128,7 @@ Below are the visualizations:
 
 
 ![2204550058_2707d92338](./result/2204550058_2707d92338.jpg)
+
 **Top 5 Classes:** groenendael, hand held computer, picket fence, neck brace, ringlet
 **Generated Caption:** A dog with a ball in his mouth.
 **Actual Caption:** A lady stands in the middle of a crowd wearing white gloves.
@@ -132,6 +136,7 @@ Below are the visualizations:
 
 
 ![2526041608_a9775ab8d7](./result/2526041608_a9775ab8d7.jpg) 
+
 **Top 5 Classes:** football helmet, desktop computer, swing, scoreboard, shield 
 **Generated Caption:** A boy playing football. 
 **Actual Caption:** A boy in a yellow uniform carrying a football is blocking another boy in a blue uniform.
@@ -139,6 +144,7 @@ Below are the visualizations:
 
 
 ![2522297487_57edf117f7](./result/2522297487_57edf117f7.jpg) 
+
 **Top 5 Classes:** cradle, cougar, Dandie Dinmont, spaghetti squash, Granny Smith 
 **Generated Caption:** A baby sleeping in a cradle. 
 **Actual Caption:** A lady holds a little boy while another little boy smiles at them.
@@ -146,6 +152,7 @@ Below are the visualizations:
 
 
 ![1554713437_61b64527dd](./result/1554713437_61b64527dd.jpg) 
+
 **Top 5 Classes:** Weimaraner, balance beam, cocktail shaker, worm fence, Greater Swiss Mountain dog 
 **Generated Caption:** A dog is walking on a balance beam. 
 **Actual Caption:** A big hound dog walking on a log in the woods.
@@ -153,6 +160,7 @@ Below are the visualizations:
 
 
 ![2251747182_6b67a3ab8b](./result/2251747182_6b67a3ab8b.jpg) 
+
 **Top 5 Classes:** basketball, web site, shoji, Pembroke, ballplayer 
 **Generated Caption:** A girl in a kimono plays basketball. 
 **Actual Caption:** A boy playing basketball in a gym.
@@ -160,6 +168,7 @@ Below are the visualizations:
 
 
 ![241345905_5826a72da1](./result/241345905_5826a72da1.jpg) 
+
 **Top 5 Classes:** buckeye, stretcher, prayer rug, scoreboard, Saluki 
 **Generated Caption:** A man stands on a diving board. 
 **Actual Caption:** a football player in a red jersey getting his knee looked at by another man.
@@ -167,6 +176,7 @@ Below are the visualizations:
 
 
 ![2610447973_89227ff978](./result/2610447973_89227ff978.jpg) 
+
 **Top 5 Classes:** black grouse, table lamp, mountain tent, space heater, tripod 
 **Generated Caption:** A man and his dog sit at a table in a black grouse hunting cabin. 
 **Actual Caption:** People sit near a fire outside.
