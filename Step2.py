@@ -129,9 +129,9 @@ if __name__ == '__main__':
     response = requests.get(URL)
     imagenet_class_index = response.json()
     all_classes = [item[1] for item in imagenet_class_index.values()]
-    init_class_prompts = clip.tokenize([f"the photo contains {c}" for c in all_classes]).to(device)
-    follow_up_prompt_template = "the photo, besides {}, contains {}"
-    end_prompt_template = "the photo, besides {}, contains no other classes of objects"
+    init_class_prompts = clip.tokenize([f"the caption of the photo should contain {c}" for c in all_classes]).to(device)
+    follow_up_prompt_template = "besides {}, the caption of the photo should contain {}"
+    end_prompt_template = "besides {}, the caption of the photo should contain no other classes of objects"
 
     # Generate the basic prompt
     print("Generating examples for the GPT-3 prompt...")
